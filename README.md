@@ -1,4 +1,4 @@
-# Ian Wood's Portolio
+# My Portolio
 
 Author: Ian Wood
 
