@@ -32,7 +32,7 @@ const Projects = () => {
 
   return (
     <div
-      id="project"
+      id="projects"
       className="min-h-screen relative"
       style={{
         background: `url(${projectsPageImg})`,
