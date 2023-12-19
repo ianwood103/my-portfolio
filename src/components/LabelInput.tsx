@@ -34,7 +34,7 @@ const LabelInput: FC<LabelInputProps> = ({
           id={placeholderText}
           placeholder={placeholderText}
           autoComplete="off"
-          className="bg-accent rounded-2xl py-4 px-6 text-textPrimary text-base sm:text-lg placeholder-textSecondary outline-none resize-none border-[1px] border-transparent focus:border-hoverSecondary"
+          className="bg-accent rounded-2xl py-4 px-6 text-textPrimary text-base sm:text-lg placeholder-textSecondary outline-none resize-none border-[1px] border-transparent focus:border-hoverSecondary xl:max-w-[335px]"
         />
       )}
     </div>
