@@ -7,8 +7,8 @@ import { Menu } from "./components";
 function App() {
   return (
     <>
-      {/* <Hero />
-      <About />
+      <Hero />
+      {/*<About />
       <Projects />
       <Contact />
       <Menu /> */}
