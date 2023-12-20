@@ -56,10 +56,26 @@ const About = () => {
             whileInView="visible"
             viewport={{ once: false }}
           >
-            <SocialMediaIcon imgSrc={linkedinIcon} title="LinkedIn" />
-            <SocialMediaIcon imgSrc={githubIcon} title="GitHub" />
-            <SocialMediaIcon imgSrc={upworkIcon} title="Upwork" />
-            <SocialMediaIcon imgSrc={instagramIcon} title="Instagram" />
+            <SocialMediaIcon
+              imgSrc={linkedinIcon}
+              href="https://www.linkedin.com/in/ian-albert-wood"
+              title="LinkedIn"
+            />
+            <SocialMediaIcon
+              imgSrc={githubIcon}
+              href="https://github.com/ianwood103"
+              title="GitHub"
+            />
+            <SocialMediaIcon
+              imgSrc={upworkIcon}
+              href="https://www.upwork.com/freelancers/~01d18e0db0b8628004"
+              title="Upwork"
+            />
+            <SocialMediaIcon
+              imgSrc={instagramIcon}
+              href="https://www.instagram.com/ian.woood/"
+              title="Instagram"
+            />
           </motion.div>
         </div>
         <div className="flex-1 flex items-center justify-center">
