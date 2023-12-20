@@ -12,6 +12,9 @@ import { Typewriter } from "react-simple-typewriter";
 // framer-motion
 import { motion } from "framer-motion";
 
+// react-scroll
+import { Link } from "react-scroll";
+
 // utils
 import { transition } from "../utils/transition";
 import { fadeIn, scale } from "../utils/variants";
@@ -59,7 +62,9 @@ const Hero = () => {
             whileInView="visible"
             viewport={{ once: false }}
           >
-            <Button secondary>Hire me</Button>
+            <Link to="contact" smooth>
+              <Button secondary>Hire me</Button>
+            </Link>
             <Button icon={downloadIcon}>Download CV</Button>
           </motion.div>
         </div>
