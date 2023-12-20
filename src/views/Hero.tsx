@@ -38,7 +38,7 @@ const Hero = () => {
             whileInView="visible"
             viewport={{ once: false }}
           >
-            Creative
+            Ian Wood
             <br />
             <span className="text-secondary">
               <Typewriter
