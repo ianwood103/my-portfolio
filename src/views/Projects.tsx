@@ -20,7 +20,7 @@ import { transition } from "../utils/transition";
 type Category = "uiUx" | "web";
 
 const Projects = () => {
-  const [activeCategory, setActiveCategory] = useState<string>("uiUx");
+  const [activeCategory, setActiveCategory] = useState<Category>("uiUx");
 
   const filteredProjects = () => {
     if (activeCategory === "uiUx") {
