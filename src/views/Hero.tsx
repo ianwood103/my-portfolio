@@ -2,6 +2,7 @@
 import homePageImg from "../assets/home-page.svg";
 import homePageIllustation from "../assets/hero-illustration.svg";
 import downloadIcon from "../assets/download-btn-icon.svg";
+import heroDesign from "../assets/hero-design.png";
 
 // components
 import { Button } from "../components";
@@ -77,9 +78,9 @@ const Hero = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: false }}
-          src={homePageIllustation}
+          src={heroDesign}
           alt=""
-          className="max-w-full sm:max-w-[401px]"
+          className="max-w-[300px] xl:max-w-[401px] xl:mr-24"
         />
       </div>
     </div>
