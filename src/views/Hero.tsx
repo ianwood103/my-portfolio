@@ -1,6 +1,5 @@
 // assets
 import homePageImg from "../assets/home-page.svg";
-import homePageIllustation from "../assets/hero-illustration.svg";
 import downloadIcon from "../assets/download-btn-icon.svg";
 import heroDesign from "../assets/hero-design.png";
 
