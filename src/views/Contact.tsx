@@ -28,7 +28,7 @@ const Contact = () => {
         <div className="flex-1 flex flex-col gap-4 ">
           <Reveal>
             <h2 className="text-center xl:text-start text-4xl sm:text-5xl lg:text-[64px] font-bold text-textPrimary">
-              Got a project in <span className="text-secondary"> mind?</span>
+              Need to get in <span className="text-secondary"> contact?</span>
             </h2>
           </Reveal>
 
