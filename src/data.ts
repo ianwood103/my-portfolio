@@ -1,52 +1,43 @@
-import uiUxOne from "./assets/ui-ux-project-one.svg";
-import uiUxTwo from "./assets/ui-ux-project-two.svg";
-import uiUxThree from "./assets/ui-ux-project-three.svg";
-import webOne from "./assets/web-project-one.jpeg";
-import webTwo from "./assets/web-project-two.jpeg";
-import webThree from "./assets/web-project-three.jpeg";
+import essai from "./assets/essai-project.png";
+import socialCookbook from "./assets/social-cookbook-project.png";
+import blogPost from "./assets/blog-post-api-project.png";
+import bulletin from "./assets/bulletin-project.png";
 
 interface Project {
   id: number;
   category: string;
   img: string;
   title: string;
+  link: string;
 }
 
 export const projects: Project[] = [
   {
     id: 0,
-    category: "uiUx",
-    img: uiUxOne,
-    title: "UI/UX Web Template",
-  },
-  {
-    id: 1,
-    category: "uiUx",
-    img: uiUxTwo,
-    title: "UI/UX Tablet Template",
-  },
-  {
-    id: 2,
-    category: "uiUx",
-    img: uiUxThree,
-    title: "Solar System App Design",
+    category: "other",
+    img: bulletin,
+    title: "Bulletin",
+    link: "https://github.com/ianwood103/Bulletin",
   },
   {
     id: 3,
     category: "web",
-    img: webOne,
-    title: "Interior Design Website",
+    img: essai,
+    title: "EssAI",
+    link: "https://www.ess-ai.com",
   },
   {
     id: 4,
     category: "web",
-    img: webTwo,
-    title: "Agency Landing Page",
+    img: socialCookbook,
+    title: "Social Cookbook",
+    link: "https://github.com/orgs/Social-Cookbook/repositories",
   },
   {
     id: 5,
     category: "web",
-    img: webThree,
-    title: "Crypto Landing Page",
+    img: blogPost,
+    title: "Blog Post API",
+    link: "https://github.com/ianwood103/blog-post-api",
   },
 ];
