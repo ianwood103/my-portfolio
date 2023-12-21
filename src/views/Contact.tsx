@@ -1,3 +1,6 @@
+// react
+import { useState } from "react";
+
 // assets
 import contactPageImg from "../assets/contact-page.svg";
 import contactIllustration from "../assets/contact-illustration.svg";
@@ -8,11 +11,47 @@ import { Button, LabelInput, Reveal } from "../components";
 // framer-motion
 import { motion } from "framer-motion";
 
+// emailjs
+import emailjs from "@emailjs/browser";
+
 // utils
 import { fadeIn, scale } from "../utils/variants";
 import { transition } from "../utils/transition";
 
 const Contact = () => {
+  const [name, setName] = useState<string>("");
+  const [email, setEmail] = useState<string>("");
+  const [message, setMessage] = useState<string>("");
+
+  const [success, setSuccess] = useState<boolean>(false);
+  const [incomplete, setIncomplete] = useState<boolean>(false);
+
+  const onSubmit = () => {
+    if (name === "" || email === "" || message === "") {
+      setIncomplete(true);
+      return;
+    } else {
+      setIncomplete(false);
+    }
+
+    emailjs
+      .send(
+        "service_2582hqp",
+        "template_coau8jn",
+        { name, email, message },
+        "42nD9JFBKAdgT-YLa"
+      )
+      .then((res) => {
+        if (res.status === 200) {
+          setSuccess(true);
+          setTimeout(() => setSuccess(false), 3000);
+          setName("");
+          setEmail("");
+          setMessage("");
+        }
+      });
+  };
+
   return (
     <div
       id="contact"
@@ -53,8 +92,18 @@ const Contact = () => {
           viewport={{ once: false }}
         >
           <div className="flex flex-col sm:flex-row items-center gap-6">
-            <LabelInput labelText="Your name" placeholderText="Name" />
-            <LabelInput labelText="Your email" placeholderText="Email" />
+            <LabelInput
+              labelText="Your name"
+              placeholderText="Name"
+              value={name}
+              setValue={setName}
+            />
+            <LabelInput
+              labelText="Your email"
+              placeholderText="Email"
+              value={email}
+              setValue={setEmail}
+            />
           </div>
 
           <div className="flex flex-col sm:flex-row items-center gap-6">
@@ -62,10 +111,32 @@ const Contact = () => {
               labelText="Your message"
               placeholderText="Message"
               textarea
+              value={message}
+              setValue={setMessage}
             />
           </div>
 
-          <Button secondary>Send Message</Button>
+          <div className="flex flex-row justify-start gap-8">
+            <Button secondary tertiary={success} onClick={onSubmit}>
+              <span
+                className={`${
+                  success ? "opacity-1" : "hidden opacity-0"
+                } transition-all ease-in-out duration-1000 pr-1.5`}
+              >
+                Message Sent
+              </span>
+              <span
+                className={`${
+                  success ? "hidden opacity-0" : "opacity-1"
+                } transition-all ease-in-out duration-1000`}
+              >
+                Send Message
+              </span>
+            </Button>
+            {incomplete && (
+              <p className="text-red-600">All fields must be completed.</p>
+            )}
+          </div>
         </motion.div>
       </div>
     </div>
