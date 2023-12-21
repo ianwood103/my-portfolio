@@ -17,16 +17,16 @@ import { motion } from "framer-motion";
 import { fadeIn } from "../utils/variants";
 import { transition } from "../utils/transition";
 
-type Category = "uiUx" | "web";
+type Category = "other" | "web";
 
 const Projects = () => {
-  const [activeCategory, setActiveCategory] = useState<string>("uiUx");
+  const [activeCategory, setActiveCategory] = useState<Category>("web");
 
   const filteredProjects = () => {
-    if (activeCategory === "uiUx") {
-      return projects.filter((item) => item.category === "uiUx");
-    } else {
+    if (activeCategory === "web") {
       return projects.filter((item) => item.category === "web");
+    } else {
+      return projects.filter((item) => item.category === "other");
     }
   };
 
@@ -58,16 +58,16 @@ const Projects = () => {
             viewport={{ once: false }}
           >
             <Button
-              secondary={activeCategory === "uiUx" ? true : false}
-              onClick={() => setActiveCategory("uiUx")}
-            >
-              UI/UX
-            </Button>
-            <Button
               secondary={activeCategory === "web" ? true : false}
               onClick={() => setActiveCategory("web")}
             >
-              Web Design
+              Web Development
+            </Button>
+            <Button
+              secondary={activeCategory === "other" ? true : false}
+              onClick={() => setActiveCategory("other")}
+            >
+              Other Software
             </Button>
           </motion.div>
 
@@ -80,7 +80,11 @@ const Projects = () => {
             viewport={{ once: false }}
           >
             {filteredProjects().map((item) => (
-              <Card imgSrc={item.img} title={item.title}></Card>
+              <Card
+                imgSrc={item.img}
+                title={item.title}
+                link={item.link}
+              ></Card>
             ))}
           </motion.div>
         </div>

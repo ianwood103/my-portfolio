@@ -4,11 +4,19 @@ import { FC } from "react";
 interface CardProps {
   imgSrc: string;
   title: string;
+  link: string;
 }
 
-const Card: FC<CardProps> = ({ imgSrc, title }) => {
+const Card: FC<CardProps> = ({ imgSrc, title, link }) => {
+  const onClick = () => {
+    window.open(link, title);
+  };
+
   return (
-    <div className="relative group flex items-center justify-center py-12 px-8 bg-accent hover:bg-hoverPrimary flex-1 cursor-pointer h-[210px] xs:h-[290px] min-w-fit sm:min-w-[330px] max-w-[448px] rounded-2xl overflow-hidden transition-all duration-700 ease-in-out">
+    <div
+      className="relative group flex items-center justify-center py-12 px-8 bg-accent hover:bg-hoverPrimary flex-1 cursor-pointer h-[210px] xs:h-[290px] min-w-fit sm:min-w-[330px] max-w-[448px] rounded-2xl overflow-hidden transition-all duration-700 ease-in-out"
+      onClick={onClick}
+    >
       <img
         src={imgSrc}
         alt=""

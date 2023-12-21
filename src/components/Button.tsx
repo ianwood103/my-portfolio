@@ -4,16 +4,25 @@ import { FC, ReactNode } from "react";
 interface ButtonProps {
   children: ReactNode;
   secondary?: boolean;
+  tertiary?: boolean;
   icon?: string;
   onClick?: () => void;
 }
 
-const Button: FC<ButtonProps> = ({ children, secondary, icon, onClick }) => {
+const Button: FC<ButtonProps> = ({
+  children,
+  secondary,
+  tertiary,
+  icon,
+  onClick,
+}) => {
   return (
     <button
       onClick={onClick}
       className={`${
-        secondary
+        tertiary
+          ? "bg-tertiary"
+          : secondary
           ? "bg-secondary hover:bg-hoverSecondary"
           : "bg-accent hover:bg-hoverPrimary"
       } transition-all ease-linear duration-300 py-2.5 px-8 rounded-full text-white text-base sm:text-lg text-bold relative w-full sm:w-fit`}
