@@ -63,7 +63,7 @@ const Hero = () => {
             viewport={{ once: false }}
           >
             <Link to="contact" smooth>
-              <Button secondary>Hire me</Button>
+              <Button secondary>Contact me</Button>
             </Link>
             <a href="resume.pdf" download="resume.pdf" target="resume">
               <Button icon={downloadIcon}>Download CV</Button>
