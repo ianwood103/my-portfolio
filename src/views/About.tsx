@@ -38,13 +38,13 @@ const About = () => {
 
           <Reveal>
             <p className="text-center xl:text-start text-base sm:text-lg text-textSecondary">
-              I am a current third-year computer science student at Georgia Tech
+              I am currently a senior computer science student at Georgia Tech
               that is seeking to pursue a career in the field of software
               engineering, ideally with an emphasis on full-stack web
               development and potentially devops engineering or project
               management. I primarily have experience in full-stack web
-              development involving React.js and ASP.net, but I am seeking to
-              continue expanding my skillset.
+              development involving TypeScript, Next.js, and ASP.net, but I am
+              seeking to continue expanding my skillset.
             </p>
           </Reveal>
 
