@@ -17,19 +17,7 @@ import { motion } from "framer-motion";
 import { fadeIn } from "../utils/variants";
 import { transition } from "../utils/transition";
 
-type Category = "other" | "web";
-
 const Projects = () => {
-  const [activeCategory, setActiveCategory] = useState<Category>("web");
-
-  const filteredProjects = () => {
-    if (activeCategory === "web") {
-      return projects.filter((item) => item.category === "web");
-    } else {
-      return projects.filter((item) => item.category === "other");
-    }
-  };
-
   return (
     <div
       id="projects"
@@ -50,28 +38,6 @@ const Projects = () => {
           </Reveal>
 
           <motion.div
-            className="flex items-center gap-4 justify-center xl:justify-start flex-col sm:flex-row"
-            variants={fadeIn("up")}
-            transition={transition()}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: false }}
-          >
-            <Button
-              secondary={activeCategory === "web" ? true : false}
-              onClick={() => setActiveCategory("web")}
-            >
-              Web Development
-            </Button>
-            <Button
-              secondary={activeCategory === "other" ? true : false}
-              onClick={() => setActiveCategory("other")}
-            >
-              Other Software
-            </Button>
-          </motion.div>
-
-          <motion.div
             className="flex gap-12 mt-12 flex-wrap justify-center"
             variants={fadeIn("up")}
             transition={transition()}
@@ -79,7 +45,7 @@ const Projects = () => {
             whileInView="visible"
             viewport={{ once: false }}
           >
-            {filteredProjects().map((item) => (
+            {projects.map((item) => (
               <Card
                 imgSrc={item.img}
                 title={item.title}

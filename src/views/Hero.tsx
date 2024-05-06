@@ -66,7 +66,7 @@ const Hero = () => {
               <Button secondary>Contact me</Button>
             </Link>
             <a href="resume.pdf" download="resume.pdf" target="resume">
-              <Button icon={downloadIcon}>Download CV</Button>
+              <Button icon={downloadIcon}>Resume</Button>
             </a>
           </motion.div>
         </div>
