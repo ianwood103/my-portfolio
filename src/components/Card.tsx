@@ -23,7 +23,7 @@ const Card: FC<CardProps> = ({ imgSrc, title, link }) => {
         className="transition-all duration-700 backdrop-blur-0 group-hover:scale-105 ease-in-out max-h-[220px]"
       />
 
-      <p className="text-textPrimary absolute -top-12 left-1/2 -translate-x-1/2 opacity-0 group-hover:top-1.5 group-hover:opacity-100 transition-all duration-700 ease-in-out text-center w-full px-8 text-base sm:text-lg z-10 [text-shadow:_0_4px_4px_rgb(0_0_0_/_50%)]">
+      <p className="text-textPrimary absolute left-1/2 -translate-x-1/2 top-1.5 opacity-100 transition-all duration-700 ease-in-out text-center w-full px-8 text-base sm:text-lg z-10 [text-shadow:_0_4px_4px_rgb(0_0_0_/_50%)]">
         {title}
       </p>
     </div>
