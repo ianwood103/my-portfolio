@@ -1,11 +1,8 @@
-// react
-import { useState } from "react";
-
 // assets
 import projectsPageImg from "../assets/projects-page.svg";
 
 // components
-import { Button, Card, Reveal } from "../components";
+import { Card, Reveal } from "../components";
 
 // data
 import { projects } from "../data";
